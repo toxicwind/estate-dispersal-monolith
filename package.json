@@ -1,0 +1,23 @@
+{
+  "name": "estate-product",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bun --hot run src/index.ts",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "biome check src/",
+    "fmt": "biome format --write src/",
+    "build": "bun build src/index.ts --outdir ./dist --target bun"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "@types/bun": "^1.1.6",
+    "bun-types": "latest",
+    "typescript": "^5.4.5"
+  },
+  "bin": {
+    "estate-product": "./src/index.ts"
+  },
+  "private": true
+}
